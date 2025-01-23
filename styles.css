@@ -91,13 +91,20 @@ header div {
 
 .logo {
     width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo img {
     /* 115px rend bien dans le header */
-    width: 115px;
+    width: 120px;
+    transition: all 0.15s ease-out;
 }
-
+.logo img:hover {
+    transform: scale(1.15);
+    transition: all 0.15s ease-out;
+}
 .logo-mobile {
     display: none;
 }
@@ -157,12 +164,12 @@ section ul {
     .title h1 {
         font-size: 1.5em;
         text-align: left;
-        padding-left: 5%;
+        /* padding-left: 5%; */
     }
 
     .logo-mobile {
         display: block;
-        height: 70px;
+        height: 110px;
         /* padding-right: 5%; */
     }
 
@@ -171,7 +178,7 @@ section ul {
     }
 
     .navbar {
-        margin-top: 5%;
+        margin-top: 2%;
         width: 100%;
         order: 1;
     }
