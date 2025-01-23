@@ -1,0 +1,222 @@
+/* Import des polices */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap');
+
+/* Reset de base */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+    background-color: blanchedalmond;
+    height: 1800px;
+}
+
+/* =============Header============= */
+header {
+    background-color: rgba(0, 0, 0, 0.918);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    width: 25%;
+}
+
+.title h1 {
+    color: white;
+    font-family: "Lexend Giga", arial;
+}
+
+.navbar {
+    width: 50%;
+}
+
+.navbar nav {
+    width: 80%;
+    height: 50%;
+}
+
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(82, 82, 82, 0.623);
+    border-radius: 100px;
+}
+
+.navbar li {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 0% 2%;
+    border-radius: 100px;
+    transition: all 0.18s ease-out;
+}
+.navbar li:hover {
+    background-color: grey;
+}
+
+.navbar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3em;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    width: 25%;
+}
+
+.logo img {
+    /* 115px rend bien dans le header */
+    width: 115px;
+}
+
+.logo-mobile {
+    display: none;
+}
+
+.transition {
+    background: linear-gradient(
+        to bottom,
+        rgb(0, 0, 0),
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0)
+    );
+    height: 40px;
+}
+
+.navbar li:first-child{
+    display: none;
+}
+
+/* =============Sections============= */
+section {
+    display: none;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    height: 1800px; /* A changer, c'est juste pour avoir un rendu */
+}
+
+section.active {
+    display: block;
+    opacity: 1;
+}
+
+section p {
+    width: 50vw;
+}
+
+section ul {
+    padding-top: 2%;
+    padding-left: 10%;
+    width: 50%;
+}
+
+/* =============Responsivity============= */
+
+@media (max-width:600px) {
+    header {
+        padding: 3%;
+        height: max-content;
+    }
+
+    .title {
+        width: 100%;
+    }
+    .title h1 {
+        font-size: 1.5em;
+        text-align: left;
+        padding-left: 5%;
+    }
+
+    .logo-mobile {
+        display: block;
+        height: 70px;
+        /* padding-right: 5%; */
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .navbar {
+        margin-top: 5%;
+        width: 100%;
+        order: 1;
+    }
+
+    .navbar nav {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        height: 100%;
+        width: 70%;
+        border-radius: 25px;
+    }
+
+    .navbar li {
+        padding: 2% 0%;
+        /* Revoir le principe de la transition avec la fonction toggleMenu et les lignes ci-dessous */
+        /* transition: all 0.2s ease-out; */
+        transition: all 0s ease;
+    }
+    .navbar li:first-child{
+        display: block;
+        padding-top: 3%;
+    }
+    .navbar a:first-of-type {
+        height: 100%;
+    }
+    .navbar li:nth-of-type(2),
+    .navbar li:nth-of-type(3),
+    .navbar li:nth-of-type(4),
+    .navbar li:nth-of-type(5) {
+        height: 0;
+        opacity: 0;
+        padding: 0;
+    }
+
+    .navbar a:nth-of-type(2),
+    .navbar a:nth-of-type(3),
+    .navbar a:nth-of-type(4),
+    .navbar a:nth-of-type(5) {
+        display: none;
+    }
+
+}

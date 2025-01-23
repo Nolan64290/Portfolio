@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Onglet -->
+  <title>CASTERAN Nolan - Portfolio</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Swipper.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <!-- Header et Navigation -->
+
+  <header id="header">
+    <div class="title">
+      <img src="Elements/Logo Blanc.png" alt="" class="logo-mobile">
+      <h1>CASTERAN<br>NOLAN</h1>
+    </div>
+    <div class="navbar">
+      <nav class="menu-list">
+        <ul>
+          <li class="menu-button"><a href="#" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></a></li>
+          <li id="accueil-bt"><a href="#" onclick="showSection('accueil')">Accueil</a></li>
+          <li id="photographie-bt"><a href="#" onclick="showSection('photographie')">Photographie</a></li>
+          <li id="graphisme-bt"><a href="#" onclick="showSection('graphisme')">Graphisme</a></li>
+          <li id="contact-bt"><a href="#" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="logo">
+      <img src="Elements/Logo Blanc.png" alt="Logo">
+    </div>
+  </header>
+  
+  <div class="transition"></div>
+
+  <!-- Contenu Principal -->
+  <main>
+    <!-- Accueil -->
+    <section id="accueil" class="active">
+      <h1>Bienvenue sur mon Portfolio</h1>
+      <p><br>Je m'appelle Nolan Casteran, et je suis graphiste et photographe passionné.
+        J'aime donner vie aux idées à travers des visuels uniques et percutants, que ce soit pour des projets graphiques, des photographies ou la création d'identités visuelles.
+        <br><br>Sur ce site, vous découvrirez :</p>
+        <ul>
+          <li>Mes projets graphiques : logos, affiches, illustrations, ...</li>
+          <li>Mes travaux photographiques : des clichets qui capturent des paysages, des moments, ...</li>
+        </ul>
+    </section>
+
+    <!-- Photographie -->
+    <section id="photographie">
+      <h1>Photographie</h1>
+      <p>Découvrez mes travaux photographiques.</p>      
+    </section>
+
+    <!-- Graphisme -->
+    <section id="graphisme">
+      <h1>Graphisme</h1>
+      <p>Voici quelques exemples de mes créations graphiques.</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h1>Contact</h1>
+      <p>Vous pouvez me joindre à <a href="mailto:monemail@example.com">monemail@example.com</a>.</p>
+    </section>
+  </main>
+
+  <script src="scripts.js"></script>
+  <script src="https://kit.fontawesome.com/2ace140b7d.js" crossorigin="anonymous"></script>
+</body>
+</html>
